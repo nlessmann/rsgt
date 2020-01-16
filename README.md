@@ -1,3 +1,5 @@
+![Test status](https://github.com/nlessmann/rsgt/workflows/Tests/badge.svg)
+
 # Random Smooth Grayvalue Transformations
 
 Usage:
