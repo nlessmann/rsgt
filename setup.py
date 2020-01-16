@@ -16,8 +16,9 @@ setuptools.setup(
     author='Nikolas Lessmann',
     url="https://github.com/nlessmann/rsgt",
     packages=['rsgt'],
-    install_requires=['numpy'],
     python_requires='>=2.6',
+    install_requires=['numpy'],
+    extras_require={'dev': ['pytest']},
     classifiers=[
         "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 3",
