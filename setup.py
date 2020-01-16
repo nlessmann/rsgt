@@ -13,7 +13,6 @@ setuptools.setup(
     description='Implementaton of random smooth grayvalue transformations for training grayvalue independent neural networks',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author='Nikolas Lessmann',
     url="https://github.com/nlessmann/rsgt",
     packages=['rsgt'],
     python_requires='>=2.6',
