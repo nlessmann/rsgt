@@ -1,4 +1,3 @@
-import sys
 import setuptools
 import rsgt
 
