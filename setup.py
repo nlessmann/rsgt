@@ -3,7 +3,7 @@ import rsgt
 
 
 # Read Readme file to get long description
-with open("README.md", "r") as fp:
+with open('README.md', 'r') as fp:
     long_description = fp.read()
 
 # Package configuration
