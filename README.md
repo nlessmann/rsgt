@@ -4,13 +4,12 @@
 
 # Random Smooth Grayvalue Transformations
 
-Usage:
+## Usage
 
 ```python
-import numpy as np
 from rsgt.augmentation import random_smooth_grayvalue_transform
 
-image = np.zeros(shape=(64, 64, 64))
+# Apply grayvalue transformation to a numpy array
 new_image = random_smooth_grayvalue_transform(image)
 ```
 
