@@ -3,6 +3,8 @@ from __future__ import division
 import numpy as np
 import collections
 
+__all__ = ['random_smooth_grayvalue_transform']
+
 
 # Parameters of a single sinusoidal function
 Sinusoid = collections.namedtuple('Sinusoid', ('frequency', 'amplitude', 'offset'))
