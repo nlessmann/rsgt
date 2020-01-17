@@ -24,7 +24,7 @@ def test_rsgt(numpy_array, eps=0.0001):
     assert transformed.shape == numpy_array.shape
     assert not np.array_equal(transformed, numpy_array)
 
-    # No input value range specified, so output value range should be from 0 to 1
+    # No input value range specified, so output value range should be exactly from 0 to 1
     assert abs(np.min(transformed)) <= eps
     assert abs(np.max(transformed) - 1) <= eps
 
@@ -43,3 +43,14 @@ def test_rsgt_randomness(numpy_array):
 
     # The two transformed images should not be the same
     assert not np.array_equal(t1, t2)
+
+
+def test_rsgt_tolerate_incorrect_min_max_values(numpy_array, eps=0.0001):
+    """Test whether incorrect min/max values are tolerated"""
+    min_val = np.min(numpy_array) + 1
+    max_val = np.max(numpy_array) - 1
+    transformed = rsgt.augmentation.random_smooth_grayvalue_transform(numpy_array, min_max_val=(min_val, max_val))
+
+    # Output values should still be in [0,1], even though min/max were incorrectly specified
+    assert np.min(transformed) >= 0 - eps
+    assert np.max(transformed) <= 1 + eps
