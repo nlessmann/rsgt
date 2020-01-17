@@ -20,8 +20,9 @@ def random_smooth_grayvalue_transform(image, n_sinusoids=4, min_frequency=0.2, m
     floating point type.
 
     The shape of the sin terms can be restricted through the two min/max frequency
-    parameters. These define how "bouncy" the final transformation function will be
-    (larger values = more ups and downs in the function).
+    parameters and the number of sin terms in the transformation function. These
+    define how "bouncy" the final transformation function will be (larger values =
+    more ups and downs in the function).
 
     The range of input values can be optionally specified, otherwise the min and max
     values of the input image are used. In cases where the input value range
