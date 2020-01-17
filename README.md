@@ -29,10 +29,7 @@ The returned numpy array will have a floating point dataype and values in the ra
 
 ### Examples
 
-<img alt="Original CT scan" src="/examples/ct0.png" width="216">
-<img alt="Transformed CT scan #1" src="/examples/ct1.png" width="216">
-<img alt="Transformed CT scan #2" src="/examples/ct2.png" width="216">
-<img alt="Transformed CT scan #3" src="/examples/ct3.png" width="216">
+<img alt="Original CT scan" src="/examples/ct0.png" width="216"><img alt="Transformed CT scan #1" src="/examples/ct1.png" width="216"><img alt="Transformed CT scan #2" src="/examples/ct2.png" width="216"><img alt="Transformed CT scan #3" src="/examples/ct3.png" width="216">
 
 The left most image is the original CT slice. The other images show the same slice with random smooth grayvalue transformations applied. The transformation
 function is shown below the transformed image. This CT scan is from the [kits19 challenge](https://kits-challenge.org)
