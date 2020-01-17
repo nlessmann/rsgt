@@ -27,6 +27,17 @@ new_image = random_smooth_grayvalue_transform(image, dtype='float32')
 
 The returned numpy array will have a floating point dataype and values in the range [0,1].
 
+### Examples
+
+![Original CT scan](/examples/ct0.png | width=200)
+![CT example 1](/examples/ct1.png | width=200)
+![CT example 2](/examples/ct2.png | width=200)
+![CT example 3](/examples/ct3.png | width=200)
+
+The left most image is the original CT slice. The other images show the same slice with random smooth grayvalue transformations applied. The transformation
+function is shown below the transformed image. This CT scan is from the [kits19 challenge](https://kits-challenge.org)
+([CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license).
+
 ## Normalization functions
 
 Because the augmentation function returns values in the range [0,1], it is necessary to either also apply the grayvalue transformation at inference time, or to
