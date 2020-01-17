@@ -15,7 +15,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/nlessmann/rsgt",
     packages=['rsgt'],
-    python_requires='>=2.6',
+    python_requires='>=2.7',
     install_requires=['numpy'],
     extras_require={'dev': ['pytest']},
     classifiers=[
