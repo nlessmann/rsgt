@@ -39,6 +39,7 @@ def random_smooth_grayvalue_transform(image, n_sinusoids=4, min_frequency=0.2, m
     assert n_sinusoids > 0
     assert min_frequency > 0
     assert max_freqency > min_frequency
+    assert min_max_val is None or min_max_val[1] >= min_max_val[0]
 
     # Make sure input data is an integer array, otherwise the LUT does not work
     image = np.asanyarray(image, dtype=int)
@@ -59,6 +60,7 @@ def random_smooth_grayvalue_transform(image, n_sinusoids=4, min_frequency=0.2, m
         max_val = np.max(image)
     else:
         min_val, max_val = min_max_val
+        image = np.clip(image, min_val, max_val)
     x = np.linspace(0, 2 * np.pi, max_val - min_val + 1)
 
     y = np.zeros_like(x)
