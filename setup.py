@@ -10,7 +10,7 @@ with open('README.md', 'r') as fp:
 setuptools.setup(
     name='rsgt',
     version=rsgt.__version__,
-    description='Implementaton of random smooth grayvalue transformations for training grayvalue independent neural networks',
+    description='Implementaton of random smooth gray value transformations for training gray value independent neural networks',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/nlessmann/rsgt",
