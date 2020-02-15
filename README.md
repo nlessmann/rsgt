@@ -79,4 +79,5 @@ new_image = random_smooth_grayvalue_transform(normalized_integer_image, min_max_
 
 ## License
 
-This package is released under the MIT license, as found in the LICENSE file.
+This package is released under the MIT license, as found in the LICENSE file, with the exception of the images in the `/examples` directory, which are released
+under a Creative Commons license (([CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)).
