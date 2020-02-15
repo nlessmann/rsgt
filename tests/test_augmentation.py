@@ -10,13 +10,16 @@ np.random.seed(239085)
 
 @pytest.fixture
 def numpy_array():
-    image = np.random.rand(64, 32, 24) * 4096 - 1024
+    image = np.random.rand(16, 32, 24, 8) * 4096 - 1024
     image = np.clip(np.round(image), -1024, 3072)
     return image.astype('int16')
 
 
-def test_rsgt(numpy_array, eps=0.0001):
+@pytest.mark.parametrize('ndim', (1, 2, 3, 4))
+def test_rsgt(numpy_array, ndim, eps=0.0001):
     """Test whether random smooth grayvalue transform function produces the desired output"""
+    if ndim < numpy_array.ndim:
+        numpy_array = numpy_array.reshape(numpy_array.shape[:(ndim - 1)] + (-1,))
     transformed = rsgt.augmentation.random_smooth_grayvalue_transform(numpy_array)
 
     # Array shape should be the same, but value should be different
