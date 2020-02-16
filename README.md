@@ -32,6 +32,18 @@ new_image = random_smooth_grayvalue_transform(image, dtype='float32')
 
 The returned numpy array will have a floating point dataype and values in the range [0,1].
 
+### Mini-batches
+
+While the function supports input data with any number of dimensions, it does currently not support mini-batches. A mini-batch of 3D images can be treated as a
+4D input array, but all images in the mini-batch will then be subject to the same transformation. This means that a single random look up table will be computed
+and applied to all images in the mini-batch. There is currently no vectorized implementation of the transformation function, so a for loop is at this point the
+only way to transform images in a mini-batch with different transformation functions:
+
+```python
+for i in range(minibatch.shape[0]):
+    minibatch[i] = random_smooth_grayvalue_transform(minibatch[i], dtype='float32')
+```
+
 ### Examples
 
 <img alt="Original CT scan" src="/examples/ct0.png" width="216"><img alt="Transformed CT scan #1" src="/examples/ct1.png" width="216"><img alt="Transformed CT scan #2" src="/examples/ct2.png" width="216"><img alt="Transformed CT scan #3" src="/examples/ct3.png" width="216">
