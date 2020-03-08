@@ -12,7 +12,7 @@ Sinusoid = collections.namedtuple('Sinusoid', ('frequency', 'amplitude', 'offset
 
 def random_smooth_grayvalue_transform(image, n_sinusoids=4, min_frequency=0.2, max_freqency=1.6, dtype='float32', min_max_val=None):
     """
-    Applies random smooth grayvalues transformations to a numpy array.
+    Applies random smooth gray value transformations to a numpy array.
 
     The original array is not changed, a new array is returned.
     The input array is expected to have integer values, the returned array will have
