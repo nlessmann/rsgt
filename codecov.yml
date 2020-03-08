@@ -1,0 +1,7 @@
+coverage:
+  range: 85..100
+
+comment:
+  layout: "diff,flags"
+  behavior: new
+  require_changes: false
