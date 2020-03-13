@@ -1,5 +1,6 @@
 [![Test status](https://github.com/nlessmann/rsgt/workflows/Tests/badge.svg)](https://github.com/nlessmann/rsgt/actions)
 [![Code coverage](https://codecov.io/gh/nlessmann/rsgt/branch/master/graph/badge.svg)](https://codecov.io/gh/nlessmann/rsgt)
+[![Documentation status](https://readthedocs.org/projects/rsgt/badge/?version=latest)](https://rsgt.readthedocs.io/en/latest/?badge=latest)
 [![pypi](https://img.shields.io/pypi/v/rsgt)](https://pypi.org/project/rsgt/)
 
 # Random Smooth Grayvalue Transformations
@@ -8,6 +9,8 @@ Convolutional neural networks trained for a detection or segmentation task in a 
 fail in other medical gray value images, even if the target structure *looks* similar in both types of images. Random smooth gray value transformations are a
 data augmentation technique aimed at forcing the network to become gray value invariant. During training, the gray value of the training images or patches are
 randomly changed, but using a smooth and continous transfer function so that shape and texture information is largely retained.
+
+API documentation: http://rsgt.readthedocs.io/
 
 ## Installation
 
