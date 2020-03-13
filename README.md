@@ -10,6 +10,8 @@ fail in other medical gray value images, even if the target structure *looks* si
 data augmentation technique aimed at forcing the network to become gray value invariant. During training, the gray value of the training images or patches are
 randomly changed, but using a smooth and continous transfer function so that shape and texture information is largely retained.
 
+API documentation: http://rsgt.readthedocs.io/
+
 ## Installation
 
 To use data augmentation with random smooth gray value transformations in your own project, simply install the `rsgt` package:
