@@ -1,5 +1,6 @@
 [![Test status](https://github.com/nlessmann/rsgt/workflows/Tests/badge.svg)](https://github.com/nlessmann/rsgt/actions)
 [![Code coverage](https://codecov.io/gh/nlessmann/rsgt/branch/master/graph/badge.svg)](https://codecov.io/gh/nlessmann/rsgt)
+[![Documentation status](https://readthedocs.org/projects/rsgt/badge/?version=latest)](https://rsgt.readthedocs.io/en/latest/?badge=latest)
 [![pypi](https://img.shields.io/pypi/v/rsgt)](https://pypi.org/project/rsgt/)
 
 # Random Smooth Grayvalue Transformations
