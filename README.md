@@ -20,8 +20,8 @@ To use data augmentation with random smooth gray value transformations in your o
 pip install rsgt
 ```
 
-* Requires Python 3.5+ (but currently still supports Python 2.7)
-* Numpy is the only dependency
+* Requires Python 2.7+ or 3.5+
+* Numpy is the only other dependency
 
 ## Data augmentation
 
@@ -92,6 +92,13 @@ N = 4096  # number of bins
 normalized_integer_image = (normalize_mr_scan(image, dtype='float32') * N).round().astype(int)
 new_image = random_smooth_grayvalue_transform(normalized_integer_image, min_max_val=(0, N), dtype='float32')
 ```
+
+## Citation
+
+Please cite our short paper describing random smooth gray value transformations for data augmentation when using this technique in your work:
+
+> N. Lessmann and B. van Ginneken, "Random smooth gray value transformations for cross modality learning with gray value invariant networks",
+> [arXiv:2003.06158](https://arxiv.org/abs/2003.06158)
 
 ## License
 
